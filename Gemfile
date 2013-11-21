@@ -1,5 +1,7 @@
 source 'http://ruby.taobao.org/'
 
+gem "therubyracer", :require => 'v8'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
