@@ -1,0 +1,630 @@
+I, [2013-11-17T14:27:11.059113 #16155]  INFO -- : Migrating to CreateBlogs (20131117062619)
+I, [2013-11-17T14:32:28.938280 #16485]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-17 14:32:28 +0800
+I, [2013-11-17T14:32:28.974548 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:32:28.999904 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.5ms)
+I, [2013-11-17T14:32:29.001545 #16485]  INFO -- : Completed 200 OK in 27ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+I, [2013-11-17T14:33:03.338878 #16485]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-17 14:33:03 +0800
+I, [2013-11-17T14:33:03.344044 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:33:03.348050 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (1.2ms)
+I, [2013-11-17T14:33:03.349320 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+I, [2013-11-17T14:33:05.880160 #16485]  INFO -- : Started GET "/blogs/new" for 127.0.0.1 at 2013-11-17 14:33:05 +0800
+I, [2013-11-17T14:33:05.882776 #16485]  INFO -- : Processing by BlogsController#new as HTML
+I, [2013-11-17T14:33:06.027157 #16485]  INFO -- :   Rendered blogs/_form.html.erb (135.3ms)
+I, [2013-11-17T14:33:06.027751 #16485]  INFO -- :   Rendered blogs/new.html.erb within layouts/application (138.3ms)
+I, [2013-11-17T14:33:06.029201 #16485]  INFO -- : Completed 200 OK in 146ms (Views: 141.1ms | ActiveRecord: 1.9ms)
+I, [2013-11-17T14:33:28.505671 #16485]  INFO -- : Started POST "/blogs" for 127.0.0.1 at 2013-11-17 14:33:28 +0800
+I, [2013-11-17T14:33:28.507978 #16485]  INFO -- : Processing by BlogsController#create as HTML
+I, [2013-11-17T14:33:28.508172 #16485]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2W6hhHv6cpDE4hjVXWHRZiOEqdrjFkAjBCo/a1Lc/E=", "blog"=>{"title"=>"张瑞兰", "content"=>"张瑞兰你好，hello!"}, "commit"=>"Create Blog"}
+E, [2013-11-17T14:33:28.546770 #16485] ERROR -- : Mysql2::Error: Incorrect string value: '\xE5\xBC\xA0\xE7\x91\x9E...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('张瑞兰你好，hello!', '2013-11-17 06:33:28', '张瑞兰', '2013-11-17 06:33:28')
+I, [2013-11-17T14:33:28.547267 #16485]  INFO -- : Completed 500 Internal Server Error in 39ms
+F, [2013-11-17T14:33:28.549591 #16485] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xE5\xBC\xA0\xE7\x91\x9E...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('张瑞兰你好，hello!', '2013-11-17 06:33:28', '张瑞兰', '2013-11-17 06:33:28')):
+  app/controllers/blogs_controller.rb:30:in `block in create'
+  app/controllers/blogs_controller.rb:29:in `create'
+
+
+I, [2013-11-17T14:33:38.748893 #16485]  INFO -- : Started POST "/blogs" for 127.0.0.1 at 2013-11-17 14:33:38 +0800
+I, [2013-11-17T14:33:38.752218 #16485]  INFO -- : Processing by BlogsController#create as HTML
+I, [2013-11-17T14:33:38.752507 #16485]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2W6hhHv6cpDE4hjVXWHRZiOEqdrjFkAjBCo/a1Lc/E=", "blog"=>{"title"=>"张瑞兰", "content"=>"张瑞兰你好，hello!"}, "commit"=>"Create Blog"}
+E, [2013-11-17T14:33:38.758996 #16485] ERROR -- : Mysql2::Error: Incorrect string value: '\xE5\xBC\xA0\xE7\x91\x9E...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('张瑞兰你好，hello!', '2013-11-17 06:33:38', '张瑞兰', '2013-11-17 06:33:38')
+I, [2013-11-17T14:33:38.759499 #16485]  INFO -- : Completed 500 Internal Server Error in 7ms
+F, [2013-11-17T14:33:38.763561 #16485] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xE5\xBC\xA0\xE7\x91\x9E...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('张瑞兰你好，hello!', '2013-11-17 06:33:38', '张瑞兰', '2013-11-17 06:33:38')):
+  app/controllers/blogs_controller.rb:30:in `block in create'
+  app/controllers/blogs_controller.rb:29:in `create'
+
+
+I, [2013-11-17T14:33:49.308167 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:33:49 +0800
+I, [2013-11-17T14:33:49.309647 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:33:49.311869 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (0.8ms)
+I, [2013-11-17T14:33:49.312623 #16485]  INFO -- : Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+I, [2013-11-17T14:33:59.068675 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:33:59 +0800
+I, [2013-11-17T14:33:59.070207 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:33:59.072661 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (1.0ms)
+I, [2013-11-17T14:33:59.073768 #16485]  INFO -- : Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+I, [2013-11-17T14:34:00.080192 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:34:00 +0800
+I, [2013-11-17T14:34:00.081748 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:34:00.084251 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (1.0ms)
+I, [2013-11-17T14:34:00.085421 #16485]  INFO -- : Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+I, [2013-11-17T14:34:09.553569 #16485]  INFO -- : Started GET "/blog/1" for 127.0.0.1 at 2013-11-17 14:34:09 +0800
+F, [2013-11-17T14:34:09.555751 #16485] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/blog/1"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-17T14:34:20.239257 #16485]  INFO -- : Started GET "/blog" for 127.0.0.1 at 2013-11-17 14:34:20 +0800
+F, [2013-11-17T14:34:20.241405 #16485] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/blog"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-17T14:34:23.335869 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:34:23 +0800
+I, [2013-11-17T14:34:23.336773 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:34:23.338216 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (0.6ms)
+I, [2013-11-17T14:34:23.339259 #16485]  INFO -- : Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+I, [2013-11-17T14:35:28.894496 #16485]  INFO -- : Started GET "/blogs/new" for 127.0.0.1 at 2013-11-17 14:35:28 +0800
+I, [2013-11-17T14:35:28.895973 #16485]  INFO -- : Processing by BlogsController#new as HTML
+I, [2013-11-17T14:35:28.899753 #16485]  INFO -- :   Rendered blogs/_form.html.erb (2.6ms)
+I, [2013-11-17T14:35:28.900038 #16485]  INFO -- :   Rendered blogs/new.html.erb within layouts/application (3.1ms)
+I, [2013-11-17T14:35:28.900736 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+I, [2013-11-17T14:36:01.369489 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:36:01 +0800
+I, [2013-11-17T14:36:01.371172 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:36:01.375958 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.6ms)
+I, [2013-11-17T14:36:01.377285 #16485]  INFO -- : Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+I, [2013-11-17T14:36:03.101121 #16485]  INFO -- : Started GET "/blogs/new" for 127.0.0.1 at 2013-11-17 14:36:03 +0800
+I, [2013-11-17T14:36:03.103588 #16485]  INFO -- : Processing by BlogsController#new as HTML
+I, [2013-11-17T14:36:03.111000 #16485]  INFO -- :   Rendered blogs/_form.html.erb (5.0ms)
+I, [2013-11-17T14:36:03.111501 #16485]  INFO -- :   Rendered blogs/new.html.erb within layouts/application (5.7ms)
+I, [2013-11-17T14:36:03.112693 #16485]  INFO -- : Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+I, [2013-11-17T14:36:10.897808 #16485]  INFO -- : Started POST "/blogs" for 127.0.0.1 at 2013-11-17 14:36:10 +0800
+I, [2013-11-17T14:36:10.899458 #16485]  INFO -- : Processing by BlogsController#create as HTML
+I, [2013-11-17T14:36:10.899609 #16485]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2W6hhHv6cpDE4hjVXWHRZiOEqdrjFkAjBCo/a1Lc/E=", "blog"=>{"title"=>"hello", "content"=>"hello world!"}, "commit"=>"Create Blog"}
+I, [2013-11-17T14:36:10.993801 #16485]  INFO -- : Redirected to http://localhost/blogs/1
+I, [2013-11-17T14:36:10.993995 #16485]  INFO -- : Completed 302 Found in 94ms (ActiveRecord: 89.7ms)
+I, [2013-11-17T14:36:11.099452 #16485]  INFO -- : Started GET "/blogs/1" for 127.0.0.1 at 2013-11-17 14:36:11 +0800
+I, [2013-11-17T14:36:11.100828 #16485]  INFO -- : Processing by BlogsController#show as HTML
+I, [2013-11-17T14:36:11.100918 #16485]  INFO -- :   Parameters: {"id"=>"1"}
+I, [2013-11-17T14:36:11.108452 #16485]  INFO -- :   Rendered blogs/show.html.erb within layouts/application (1.3ms)
+I, [2013-11-17T14:36:11.109494 #16485]  INFO -- : Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+I, [2013-11-17T14:36:13.180730 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:36:13 +0800
+I, [2013-11-17T14:36:13.183407 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:36:13.188480 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.9ms)
+I, [2013-11-17T14:36:13.189581 #16485]  INFO -- : Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+I, [2013-11-17T14:36:16.760134 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:36:16 +0800
+I, [2013-11-17T14:36:16.761638 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:36:16.765503 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.3ms)
+I, [2013-11-17T14:36:16.766822 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+I, [2013-11-17T14:36:18.374927 #16485]  INFO -- : Started GET "/blogs/new" for 127.0.0.1 at 2013-11-17 14:36:18 +0800
+I, [2013-11-17T14:36:18.377578 #16485]  INFO -- : Processing by BlogsController#new as HTML
+I, [2013-11-17T14:36:18.385337 #16485]  INFO -- :   Rendered blogs/_form.html.erb (5.4ms)
+I, [2013-11-17T14:36:18.385892 #16485]  INFO -- :   Rendered blogs/new.html.erb within layouts/application (6.2ms)
+I, [2013-11-17T14:36:18.387050 #16485]  INFO -- : Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+I, [2013-11-17T14:36:36.150022 #16485]  INFO -- : Started POST "/blogs" for 127.0.0.1 at 2013-11-17 14:36:36 +0800
+I, [2013-11-17T14:36:36.151486 #16485]  INFO -- : Processing by BlogsController#create as HTML
+I, [2013-11-17T14:36:36.151635 #16485]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2W6hhHv6cpDE4hjVXWHRZiOEqdrjFkAjBCo/a1Lc/E=", "blog"=>{"title"=>"测试", "content"=>"测试成功！"}, "commit"=>"Create Blog"}
+E, [2013-11-17T14:36:36.160370 #16485] ERROR -- : Mysql2::Error: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('测试成功！', '2013-11-17 06:36:36', '测试', '2013-11-17 06:36:36')
+I, [2013-11-17T14:36:36.161183 #16485]  INFO -- : Completed 500 Internal Server Error in 9ms
+F, [2013-11-17T14:36:36.164974 #16485] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('测试成功！', '2013-11-17 06:36:36', '测试', '2013-11-17 06:36:36')):
+  app/controllers/blogs_controller.rb:30:in `block in create'
+  app/controllers/blogs_controller.rb:29:in `create'
+
+
+I, [2013-11-17T14:36:45.545351 #16485]  INFO -- : Started POST "/blogs" for 127.0.0.1 at 2013-11-17 14:36:45 +0800
+I, [2013-11-17T14:36:45.547138 #16485]  INFO -- : Processing by BlogsController#create as HTML
+I, [2013-11-17T14:36:45.547327 #16485]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2W6hhHv6cpDE4hjVXWHRZiOEqdrjFkAjBCo/a1Lc/E=", "blog"=>{"title"=>"测试", "content"=>"测试成功！"}, "commit"=>"Create Blog"}
+E, [2013-11-17T14:36:45.551423 #16485] ERROR -- : Mysql2::Error: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('测试成功！', '2013-11-17 06:36:45', '测试', '2013-11-17 06:36:45')
+I, [2013-11-17T14:36:45.551941 #16485]  INFO -- : Completed 500 Internal Server Error in 4ms
+F, [2013-11-17T14:36:45.556057 #16485] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'content' at row 1: INSERT INTO `blogs` (`content`, `created_at`, `title`, `updated_at`) VALUES ('测试成功！', '2013-11-17 06:36:45', '测试', '2013-11-17 06:36:45')):
+  app/controllers/blogs_controller.rb:30:in `block in create'
+  app/controllers/blogs_controller.rb:29:in `create'
+
+
+I, [2013-11-17T14:36:49.659451 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:36:49 +0800
+I, [2013-11-17T14:36:49.661160 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:36:49.665064 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.3ms)
+I, [2013-11-17T14:36:49.666175 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+I, [2013-11-17T14:38:08.778144 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:38:08 +0800
+I, [2013-11-17T14:38:08.779769 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:38:08.783537 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.2ms)
+I, [2013-11-17T14:38:08.784623 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+I, [2013-11-17T14:38:11.928516 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:38:11 +0800
+I, [2013-11-17T14:38:11.930502 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:38:11.934326 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.2ms)
+I, [2013-11-17T14:38:11.935600 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+I, [2013-11-17T14:38:13.295101 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:38:13 +0800
+I, [2013-11-17T14:38:13.296721 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:38:13.300443 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.2ms)
+I, [2013-11-17T14:38:13.301533 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+I, [2013-11-17T14:38:14.711748 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:38:14 +0800
+I, [2013-11-17T14:38:14.713819 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:38:14.719703 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (3.7ms)
+I, [2013-11-17T14:38:14.721617 #16485]  INFO -- : Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+I, [2013-11-17T14:38:15.518867 #16485]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:38:15 +0800
+I, [2013-11-17T14:38:15.520352 #16485]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:38:15.524101 #16485]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (2.2ms)
+I, [2013-11-17T14:38:15.525283 #16485]  INFO -- : Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+I, [2013-11-17T14:38:47.743985 #17006]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 14:38:47 +0800
+I, [2013-11-17T14:38:47.761608 #17006]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T14:38:47.801648 #17006]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (17.5ms)
+I, [2013-11-17T14:38:47.804516 #17006]  INFO -- : Completed 200 OK in 43ms (Views: 20.1ms | ActiveRecord: 1.8ms)
+I, [2013-11-17T20:33:31.743853 #2525]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-17 20:33:31 +0800
+I, [2013-11-17T20:33:31.743853 #2518]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 20:33:31 +0800
+I, [2013-11-17T20:33:31.914122 #2518]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T20:33:31.914238 #2525]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T20:33:31.990911 #2525]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (13.8ms)
+I, [2013-11-17T20:33:31.991194 #2518]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (14.1ms)
+I, [2013-11-17T20:33:31.992560 #2525]  INFO -- : Completed 200 OK in 78ms (Views: 54.2ms | ActiveRecord: 1.7ms)
+I, [2013-11-17T20:33:31.992707 #2518]  INFO -- : Completed 200 OK in 78ms (Views: 52.4ms | ActiveRecord: 2.6ms)
+I, [2013-11-17T20:33:39.197867 #2518]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-17 20:33:39 +0800
+I, [2013-11-17T20:33:39.202194 #2518]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T20:33:39.207331 #2518]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (3.0ms)
+I, [2013-11-17T20:33:39.208665 #2518]  INFO -- : Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+I, [2013-11-17T20:48:32.468877 #3466]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-17 20:48:32 +0800
+I, [2013-11-17T20:48:32.486334 #3466]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T20:48:32.521717 #3466]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (11.7ms)
+I, [2013-11-17T20:48:32.523448 #3466]  INFO -- : Completed 200 OK in 37ms (Views: 13.3ms | ActiveRecord: 1.9ms)
+I, [2013-11-17T20:48:34.270432 #3466]  INFO -- : Started GET "/blogs/new" for 127.0.0.1 at 2013-11-17 20:48:34 +0800
+I, [2013-11-17T20:48:34.274797 #3466]  INFO -- : Processing by BlogsController#new as HTML
+I, [2013-11-17T20:48:34.362675 #3466]  INFO -- :   Rendered blogs/_form.html.erb (82.4ms)
+I, [2013-11-17T20:48:34.363021 #3466]  INFO -- :   Rendered blogs/new.html.erb within layouts/application (85.0ms)
+I, [2013-11-17T20:48:34.363963 #3466]  INFO -- : Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+I, [2013-11-17T20:48:49.286597 #3466]  INFO -- : Started POST "/blogs" for 127.0.0.1 at 2013-11-17 20:48:49 +0800
+I, [2013-11-17T20:48:49.288002 #3466]  INFO -- : Processing by BlogsController#create as HTML
+I, [2013-11-17T20:48:49.288101 #3466]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s2W6hhHv6cpDE4hjVXWHRZiOEqdrjFkAjBCo/a1Lc/E=", "blog"=>{"title"=>"张瑞兰", "content"=>"hello张瑞兰！"}, "commit"=>"Create Blog"}
+I, [2013-11-17T20:48:49.463451 #3466]  INFO -- : Redirected to http://localhost/blogs/2
+I, [2013-11-17T20:48:49.464035 #3466]  INFO -- : Completed 302 Found in 176ms (ActiveRecord: 133.4ms)
+I, [2013-11-17T20:48:49.543126 #3466]  INFO -- : Started GET "/blogs/2" for 127.0.0.1 at 2013-11-17 20:48:49 +0800
+I, [2013-11-17T20:48:49.545284 #3466]  INFO -- : Processing by BlogsController#show as HTML
+I, [2013-11-17T20:48:49.545450 #3466]  INFO -- :   Parameters: {"id"=>"2"}
+I, [2013-11-17T20:48:49.553518 #3466]  INFO -- :   Rendered blogs/show.html.erb within layouts/application (1.8ms)
+I, [2013-11-17T20:48:49.554957 #3466]  INFO -- : Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.6ms)
+I, [2013-11-17T20:48:51.009383 #3466]  INFO -- : Started GET "/blogs" for 127.0.0.1 at 2013-11-17 20:48:51 +0800
+I, [2013-11-17T20:48:51.011874 #3466]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-17T20:48:51.018824 #3466]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (3.8ms)
+I, [2013-11-17T20:48:51.019587 #3466]  INFO -- : Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+I, [2013-11-21T11:38:01.363478 #5221]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 11:38:01 +0800
+I, [2013-11-21T11:38:01.489496 #5221]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-21T11:38:01.564525 #5221]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (12.7ms)
+I, [2013-11-21T11:38:01.566254 #5221]  INFO -- : Completed 200 OK in 77ms (Views: 52.8ms | ActiveRecord: 2.1ms)
+I, [2013-11-21T13:40:52.028140 #5221]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 13:40:52 +0800
+I, [2013-11-21T13:40:52.031656 #5221]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-21T13:40:52.037684 #5221]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (3.9ms)
+I, [2013-11-21T13:40:52.039129 #5221]  INFO -- : Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+I, [2013-11-21T13:40:54.809259 #5221]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 13:40:54 +0800
+I, [2013-11-21T13:40:54.810818 #5221]  INFO -- : Processing by BlogsController#index as HTML
+I, [2013-11-21T13:40:54.815340 #5221]  INFO -- :   Rendered blogs/index.html.erb within layouts/application (3.0ms)
+I, [2013-11-21T13:40:54.816108 #5221]  INFO -- : Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+I, [2013-11-21T13:41:19.901121 #10406]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 13:41:19 +0800
+I, [2013-11-21T13:41:19.915641 #10406]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T13:41:19.939191 #10406]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.6ms)
+I, [2013-11-21T13:41:19.941634 #10406]  INFO -- : Completed 200 OK in 26ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T13:41:20.014783 #10406]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 13:41:20 +0800
+F, [2013-11-21T13:41:20.016744 #10406] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T13:41:20.046758 #10415]  INFO -- : Started GET "/docs-assets/ico/favicon.png" for 127.0.0.1 at 2013-11-21 13:41:20 +0800
+F, [2013-11-21T13:41:20.059091 #10415] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/docs-assets/ico/favicon.png"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T13:43:47.427669 #10415]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 13:43:47 +0800
+I, [2013-11-21T13:43:47.433225 #10415]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T13:43:47.456879 #10415]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.6ms)
+I, [2013-11-21T13:43:47.458755 #10415]  INFO -- : Completed 200 OK in 25ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T13:43:47.533484 #10415]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 13:43:47 +0800
+F, [2013-11-21T13:43:47.535552 #10415] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:26:29.342027 #10415]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:26:29 +0800
+I, [2013-11-21T15:26:29.345266 #10415]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:26:29.347277 #10415]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:26:29.348481 #10415]  INFO -- : Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:26:29.425269 #10415]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:26:29 +0800
+F, [2013-11-21T15:26:29.426435 #10415] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:26:32.910783 #10415]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:26:32 +0800
+I, [2013-11-21T15:26:32.912257 #10415]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:26:32.913660 #10415]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:26:32.914730 #10415]  INFO -- : Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:26:32.937259 #10415]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:26:32 +0800
+F, [2013-11-21T15:26:32.938374 #10415] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:26:34.825857 #10415]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:26:34 +0800
+I, [2013-11-21T15:26:34.827400 #10415]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:26:34.828941 #10415]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:26:34.830052 #10415]  INFO -- : Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:26:34.854306 #10415]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:26:34 +0800
+F, [2013-11-21T15:26:34.856183 #10415] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:26:48.690325 #13557]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:26:48 +0800
+I, [2013-11-21T15:26:48.712975 #13557]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:26:48.738180 #13557]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.5ms)
+I, [2013-11-21T15:26:48.740102 #13557]  INFO -- : Completed 200 OK in 27ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:26:48.797845 #13557]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:26:48 +0800
+F, [2013-11-21T15:26:48.799225 #13557] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:30:34.050233 #13557]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:30:34 +0800
+I, [2013-11-21T15:30:34.053017 #13557]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:30:34.054804 #13557]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:30:34.055626 #13557]  INFO -- : Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:30:34.117357 #13557]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:30:34 +0800
+F, [2013-11-21T15:30:34.119250 #13557] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:34:09.433638 #14039]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:34:09 +0800
+I, [2013-11-21T15:34:09.455099 #14039]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:34:09.478029 #14039]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.6ms)
+I, [2013-11-21T15:34:09.480031 #14039]  INFO -- : Completed 200 OK in 25ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:34:09.615449 #14039]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:34:09 +0800
+F, [2013-11-21T15:34:09.616743 #14039] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:36:16.387537 #14039]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:36:16 +0800
+I, [2013-11-21T15:36:16.389129 #14039]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:36:16.390163 #14039]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:36:16.390914 #14039]  INFO -- : Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:36:16.494089 #14039]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:36:16 +0800
+F, [2013-11-21T15:36:16.495613 #14039] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:36:38.923571 #14266]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:36:38 +0800
+I, [2013-11-21T15:36:38.942587 #14266]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:36:38.965163 #14266]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.5ms)
+I, [2013-11-21T15:36:38.967140 #14266]  INFO -- : Completed 200 OK in 24ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:36:39.032537 #14266]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:36:39 +0800
+F, [2013-11-21T15:36:39.034810 #14266] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:42:01.119704 #14564]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:42:01 +0800
+I, [2013-11-21T15:42:01.140069 #14564]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:42:01.162587 #14564]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.5ms)
+I, [2013-11-21T15:42:01.164506 #14564]  INFO -- : Completed 200 OK in 24ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:42:01.236630 #14564]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:42:01 +0800
+F, [2013-11-21T15:42:01.238966 #14564] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:42:23.308626 #14564]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:42:23 +0800
+I, [2013-11-21T15:42:23.311731 #14564]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:42:23.315002 #14564]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.5ms)
+I, [2013-11-21T15:42:23.315794 #14564]  INFO -- : Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:42:24.811625 #14564]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:42:24 +0800
+I, [2013-11-21T15:42:24.813610 #14564]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:42:24.815332 #14564]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:42:24.816448 #14564]  INFO -- : Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:42:37.745096 #14564]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:42:37 +0800
+I, [2013-11-21T15:42:37.746309 #14564]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:42:37.747537 #14564]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.1ms)
+I, [2013-11-21T15:42:37.748490 #14564]  INFO -- : Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:42:37.913648 #14564]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:42:37 +0800
+F, [2013-11-21T15:42:37.915972 #14564] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
+I, [2013-11-21T15:47:53.806317 #14884]  INFO -- : Started GET "/" for 127.0.0.1 at 2013-11-21 15:47:53 +0800
+I, [2013-11-21T15:47:53.824536 #14884]  INFO -- : Processing by WelcomeController#index as HTML
+I, [2013-11-21T15:47:53.847203 #14884]  INFO -- :   Rendered welcome/index.html.erb within layouts/application (0.6ms)
+I, [2013-11-21T15:47:53.849108 #14884]  INFO -- : Completed 200 OK in 24ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+I, [2013-11-21T15:47:53.907128 #14884]  INFO -- : Started GET "/sticky-footer-navbar.css" for 127.0.0.1 at 2013-11-21 15:47:53 +0800
+F, [2013-11-21T15:47:53.908462 #14884] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/sticky-footer-navbar.css"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  passenger (4.0.24) lib/phusion_passenger/rack/thread_handler_extension.rb:77:in `process_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:140:in `accept_and_process_next_request'
+  passenger (4.0.24) lib/phusion_passenger/request_handler/thread_handler.rb:108:in `main_loop'
+  passenger (4.0.24) lib/phusion_passenger/request_handler.rb:441:in `block (3 levels) in start_threads'
+
+
