@@ -34,6 +34,6 @@ production:
   encoding: utf8
   database: blade_production
   pool: 5
-  username: johnson
+  username: root
   password: zhangsong
   socket: /var/run/mysqld/mysqld.sock
